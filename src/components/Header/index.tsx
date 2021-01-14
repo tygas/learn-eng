@@ -19,9 +19,9 @@ export const Header = () => {
   <Fragment>
     <ThemeSwitcher />
     <ClassSwitcherBtn defaultValue={classWords} />
-    <h1 className='text-center'>Иврит</h1>
+    <h1 className='text-center'>Word?</h1>
     <p className='text-center'>
-      {`${passedLength} ${getCaption(passedLength)} из ${length}`}
+      {`${passedLength} ${getCaption(passedLength)} from ${length}`}
     </p>
   </Fragment>
 )}

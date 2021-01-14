@@ -1,10 +1,10 @@
 export const getCaption = (value: number) => {
   const restOfDivide = value % 10
   if (restOfDivide === 1){
-    return 'слово'
+    return 'word'
   } else if (restOfDivide > 1 && restOfDivide < 5) {
-    return 'слова'
+    return 'words'
   } else {
-    return 'слов'
+    return 'word'
   }
 }

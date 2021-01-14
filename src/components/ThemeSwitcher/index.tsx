@@ -28,7 +28,7 @@ export const ThemeSwitcher = () => {
           toggleTheme(!isDarkTheme)
         }}
         className='btn btn-dark theme-switcher-btn'
-        value={isDarkTheme ? 'בהיר' : 'כהה'}
+        value={isDarkTheme ? 'day' : 'night'}
       />
       {isDarkTheme && <style media='screen'>
         {darkThemeCss}

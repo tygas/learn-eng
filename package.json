@@ -5,14 +5,31 @@
   "private": true,
   "dependencies": {
     "@types/lodash": "^4.14.149",
-    "@types/react": "^16.9.13",
-    "@types/react-dom": "^16.9.4",
-    "@types/react-router-dom": "^5.1.3",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
-    "typescript": "^3.7.2"
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.7",
+    "firebase": "^8.2.2",
+    "formik": "^2.2.6",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.1",
+    "typescript": "^4.1.3"
+  },
+  "prettier": {
+    "importSort": {
+      ".js, .jsx, .ts, .tsx": {
+        "style": "module"
+      }
+    },
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "jsx-space-before-trailing-slash": true
   },
   "scripts": {
     "start": "react-scripts start",

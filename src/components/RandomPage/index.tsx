@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { Arrow } from '../Arrow'
 import { WordCard } from '../WordCard'
+import AddWord from '../AddWord'
 import { Btn } from '../Btn'
 import { nextBtnCaption, nextBtnClassName } from '../../config'
 import { useWords } from './hooks'
@@ -23,6 +24,7 @@ export const RandomPage = () => {
           value={nextBtnCaption}
         />
       </div>
+      <AddWord />
     </Fragment>
   )
 }
