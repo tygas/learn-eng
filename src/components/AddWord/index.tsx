@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react'
 // import PropTypes from "prop-types";
 import { Formik } from 'formik'
 
-// import { useAppState } from "./AppStateContext"
-
+import tr from '../translate'
 import { db } from '../../config/firebase'
 
 function AddWord() {
@@ -21,8 +20,8 @@ function AddWord() {
   }, [])
 
   const saveWord = async (word: string) => {
-    const translation = 'asd'
-    return await db.ref('/db').push({ word, translation })
+    const translation = await tr(word)
+    return db.ref('/db').push({ word, translation })
   }
 
   const deleteWord = async (key: string) => {
@@ -32,7 +31,7 @@ function AddWord() {
   return (
     <>
       <Formik
-        initialValues={{ word: 'jared' }}
+        initialValues={{ word: 'one' }}
         onSubmit={async ({ word }, actions) => {
           const res = await saveWord(word)
           console.log(res)

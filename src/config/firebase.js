@@ -1,7 +1,7 @@
-import Firebase from "firebase";
+import firebase from 'firebase/app';
+import 'firebase/database'; // If using Firebase database
 
-
-var firebase = {
+const fir = {
     apiKey: "AIzaSyCc4t_4QhuXPN6OUU9zU9QqfSFKCOam4-U",
     authDomain: "mood-calendar-2020.firebaseapp.com",
     databaseURL: "https://mood-calendar-2020.firebaseio.com",
@@ -12,5 +12,5 @@ var firebase = {
     measurementId: "G-7X3608W1X9"
 };
 
-const app = Firebase.initializeApp(firebase);
+const app = firebase.initializeApp(fir);
 export const db = app.database();
