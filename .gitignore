@@ -6,7 +6,7 @@
 .pnp.js
 package-lock.json
 *.map
-
+.idea
 # testing
 /coverage
 node_modules

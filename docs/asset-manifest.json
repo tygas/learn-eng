@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/learn-hebrew/static/css/main.77d17818.chunk.css",
+    "main.js": "/learn-hebrew/static/js/main.0a29a60e.chunk.js",
+    "main.js.map": "/learn-hebrew/static/js/main.0a29a60e.chunk.js.map",
+    "runtime-main.js": "/learn-hebrew/static/js/runtime-main.849e1105.js",
+    "runtime-main.js.map": "/learn-hebrew/static/js/runtime-main.849e1105.js.map",
+    "static/js/2.2b36bca1.chunk.js": "/learn-hebrew/static/js/2.2b36bca1.chunk.js",
+    "static/js/2.2b36bca1.chunk.js.map": "/learn-hebrew/static/js/2.2b36bca1.chunk.js.map",
+    "index.html": "/learn-hebrew/index.html",
+    "static/css/main.77d17818.chunk.css.map": "/learn-hebrew/static/css/main.77d17818.chunk.css.map",
+    "static/js/2.2b36bca1.chunk.js.LICENSE.txt": "/learn-hebrew/static/js/2.2b36bca1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.849e1105.js",
+    "static/js/2.2b36bca1.chunk.js",
+    "static/css/main.77d17818.chunk.css",
+    "static/js/main.0a29a60e.chunk.js"
+  ]
+}
