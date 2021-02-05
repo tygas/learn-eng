@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/database'; // If using Firebase database
-import * as admin from 'firebase-admin';
+// import * as admin from 'firebase-admin';
 
 //https://firebase.google.com/docs/admin/setup
 
@@ -16,10 +16,10 @@ const fir = {
 };
 
 
-admin.initializeApp({
-    credential: admin.credential.applicationDefault(),
-    databaseURL: fir.databaseURL
-});
+// admin.initializeApp({
+//     credential: admin.credential.applicationDefault(),
+//     databaseURL: fir.databaseURL
+// });
 
 const app = firebase.initializeApp(fir);
 export const db = app.database();
