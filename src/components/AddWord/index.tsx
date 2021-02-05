@@ -11,7 +11,8 @@ function AddWord() {
     try {
       db.ref('/db').on('value', (querySnapShot) => {
         let data = querySnapShot.val() ? querySnapShot.val() : {}
-        console.log(data)
+
+        data.map((dt: unknown) => (dt.text = dt.text.toString()))
         setWords({ ...data })
       })
     } catch (e) {
