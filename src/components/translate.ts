@@ -13,7 +13,8 @@ export default async function tr(word: string) {
         const res: any = await translate(word, { to: "lt" });
         return res.text.toString() || "";
     } catch (e) {
-        return { text: e };
+        console.error({ text: e });
+        return {text: ''};
     }
 }
 
