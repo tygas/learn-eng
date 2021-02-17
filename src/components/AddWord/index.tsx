@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react'
 // import PropTypes from "prop-types";
 import { Formik } from 'formik'
-
+import './word.scss'
 import tr from '../translate'
 import { db } from '../../config/firebase'
+import { AddNewItem } from '../../AddNewItem'
 
 function AddWord() {
   const [words, setWords] = useState([])
+  const [showForm, setShowForm] = useState(false)
+
   useEffect(() => {
     try {
       db.ref('/db').on('value', (querySnapShot) => {
@@ -27,6 +30,9 @@ function AddWord() {
 
   const deleteWord = async (key: string) => {
     return await db.ref('/db').child(key).remove()
+  }
+  const onTranslationChange = (row: any, id: string) => {
+    return db.ref('db/' + id).set(row)
   }
 
   return (
@@ -64,8 +70,29 @@ function AddWord() {
             return (
               <li key={key}>
                 <span style={{ width: '200px' }}>
-                  {word} - {translation}{' '}
+                  {word} -{' '}
+                  <span
+                    className="editable"
+                    contentEditable={true}
+                    onClick={() => setShowForm(true)}
+                    onBlur={(e) =>
+                      onTranslationChange(
+                        {
+                          word,
+                          translation: e.target.innerText,
+                        },
+                        id,
+                      )
+                    }
+                  >
+                    {translation || '???'}
+                  </span>
                 </span>
+                <AddNewItem
+                  toggleButtonText="+"
+                  onAdd={(e) => console.log(e)}
+                  dark
+                />
                 <button onClick={() => deleteWord(id)}>x</button>
               </li>
             )
