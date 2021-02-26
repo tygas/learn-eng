@@ -11,4 +11,8 @@ export const wordsClass4 = [
     word: 'suffrage',
     translation: 'rinkimu balsas',
   },
+  {
+    word: 'deliberate',
+    translation: 'rinkimu balsas',
+  },
 ]

@@ -21,7 +21,7 @@ export const AddItemButton = styled.button<AddItemButtonProps>` background-color
   padding: 10px 12px;
   text-align: left;
   transition: background 85ms ease-in;
-  width: 20px;
+  width: 50px;
 
   &:hover {
     background-color: #ffffff52;

@@ -11,6 +11,7 @@ setCORS("http://cors-anywhere.herokuapp.com/");
 export default async function tr(word: string) {
     try {
         const res: any = await translate(word, { to: "lt" });
+        debugger
         return res.text.toString() || "";
     } catch (e) {
         console.error({ text: e });

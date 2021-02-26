@@ -4,3 +4,19 @@
   overflow: hidden;
   border-bottom: 1px solid grey;
 }
+
+.editable {
+  cursor: pointer;
+  color: #fff;
+
+  &:hover {
+    visibility: visible;
+    color: #ccc;
+  }
+}
+
+.is-link {
+  border: 0;
+  background: none;
+  font-size: 10px;
+}

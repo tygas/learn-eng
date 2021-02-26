@@ -72,8 +72,9 @@ function AddWord() {
                 <span style={{ width: '200px' }}>
                   {word} -{' '}
                   <span
-                    className="editable"
+                    className={showForm ? '' : 'editable'}
                     contentEditable={true}
+                    suppressContentEditableWarning={true}
                     onClick={() => setShowForm(true)}
                     onBlur={(e) =>
                       onTranslationChange(
@@ -85,15 +86,13 @@ function AddWord() {
                       )
                     }
                   >
-                    {translation || '???'}
+                    {translation || '???'} {showForm}
                   </span>
                 </span>
-                <AddNewItem
-                  toggleButtonText="+"
-                  onAdd={(e) => console.log(e)}
-                  dark
-                />
-                <button onClick={() => deleteWord(id)}>x</button>
+
+                <button className="is-link" onClick={() => deleteWord(id)}>
+                  ❌
+                </button>
               </li>
             )
           })
